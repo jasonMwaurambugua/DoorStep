@@ -1,18 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "module": "commonjs",
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["node_modules/*", "*"]
-    }
+    "noEmitOnError": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "src/app.ts",
+    "src/models/listing.ts",
+    "src/models/inquiry.ts",
+    "src/models/user.ts",
+    "src/models/agency.ts",
+    "src/middleware/auth.ts",
+    "src/services/email-service.ts",
+    "src/routes/listings.ts",
+    "src/routes/inquiries.ts",
+    "src/routes/auth.ts",
+    "src/routes/users.ts",
+    "src/routes/agencies.ts",
+    "src/routes/admin.ts",
+    "src/routes/uploads.ts",
+    "src/scripts/create-admin.ts"
+  ],
+  "exclude": ["node_modules"]
 }
